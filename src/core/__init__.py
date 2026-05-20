@@ -1,0 +1,53 @@
+"""核心层：常量与领域异常。"""
+
+from src.core.constants import (
+    MAX_DOC_CHARS,
+    STATE_PENDING_QUESTION,
+    STATE_PDF_NAME,
+    STATE_PDF_PAGES,
+    STATE_PDF_SIG,
+    STATE_PDF_TEXT,
+    STATE_QA,
+    STATE_RAG_CHUNKS,
+    STATE_RAG_COLLECTION,
+    STATE_RAG_READY,
+    STATE_SELECTED_MODEL,
+    STATE_SUMMARY,
+    SUGGESTION_QUESTIONS,
+)
+from src.core.exceptions import (
+    AppError,
+    api_not_configured_error,
+    classify_openai_error,
+    classify_unknown_error,
+    empty_content_error,
+    empty_file_error,
+    pdf_parse_error,
+    rag_not_ready_error,
+    token_limit_error,
+)
+
+__all__ = [
+    "MAX_DOC_CHARS",
+    "STATE_PENDING_QUESTION",
+    "STATE_PDF_NAME",
+    "STATE_PDF_PAGES",
+    "STATE_PDF_SIG",
+    "STATE_PDF_TEXT",
+    "STATE_QA",
+    "STATE_RAG_CHUNKS",
+    "STATE_RAG_COLLECTION",
+    "STATE_RAG_READY",
+    "STATE_SELECTED_MODEL",
+    "STATE_SUMMARY",
+    "SUGGESTION_QUESTIONS",
+    "AppError",
+    "api_not_configured_error",
+    "classify_openai_error",
+    "classify_unknown_error",
+    "empty_content_error",
+    "empty_file_error",
+    "pdf_parse_error",
+    "rag_not_ready_error",
+    "token_limit_error",
+]

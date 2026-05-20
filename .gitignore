@@ -1,0 +1,43 @@
+# 密钥与本地配置
+.env
+.env.local
+.streamlit/secrets.toml
+src/app_settings.py
+src/app_settings.local.py
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+
+# 向量库与上传缓存
+data/chroma/
+chroma_db/
+uploads/
+*.sqlite3
+
+# 调试与临时文件
+debug-*.log
+*.log
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+
+# IDE
+.idea/
+.vscode/
+*.swp
