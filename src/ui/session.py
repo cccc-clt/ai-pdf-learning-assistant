@@ -6,11 +6,11 @@ import streamlit as st
 
 from src.config import get_default_model_id, get_model_options
 from src.core.constants import (
-    STATE_PENDING_QUESTION,
     STATE_PDF_NAME,
     STATE_PDF_PAGES,
     STATE_PDF_SIG,
     STATE_PDF_TEXT,
+    STATE_PENDING_QUESTION,
     STATE_QA,
     STATE_RAG_BUILD_DEBUG,
     STATE_RAG_CHUNKS,
@@ -34,7 +34,10 @@ def init_session() -> None:
 
 
 def pdf_upload_sig(name: str, size: int) -> tuple[str, int]:
-    """上传文件身份：(文件名, 声明大小)。用 size 而非 len(bytes)，避免 rerun 后 getvalue 为空导致 sig 漂移。"""
+    """上传文件身份：(文件名, 声明大小)。
+
+    用 size 而非 len(bytes)，避免 rerun 后 getvalue 为空导致 sig 漂移。
+    """
     return (name, size)
 
 

@@ -276,7 +276,8 @@ def run_app() -> None:
     )
 
     init_session()
-    # selected_model 仅用于总结/对话；向量索引固定使用 EMBEDDING_MODEL_ID（见 RAGService.build_index）
+    # selected_model 仅用于总结/对话；向量索引固定使用 EMBEDDING_MODEL_ID
+    # （见 RAGService.build_index）
     selected_model = render_sidebar()
     st.markdown(get_app_css(), unsafe_allow_html=True)
 
@@ -300,7 +301,9 @@ def run_app() -> None:
               <p class="ai-subtitle">上传文档 · 智能总结 · RAG 检索问答</p>
             </div>
           </div>
-          <div class="{_pill_class}"><span class="ai-pill-dot"></span>{html.escape(_pill_label)}</div>
+          <div class="{_pill_class}">
+            <span class="ai-pill-dot"></span>{html.escape(_pill_label)}
+          </div>
         </div>
         """,
         unsafe_allow_html=True,

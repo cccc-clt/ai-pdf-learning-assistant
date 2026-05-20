@@ -5,7 +5,12 @@ from __future__ import annotations
 import streamlit as st
 
 from src.core.constants import STATE_SUMMARY
-from src.core.exceptions import AppError, api_not_configured_error, classify_unknown_error, empty_content_error
+from src.core.exceptions import (
+    AppError,
+    api_not_configured_error,
+    classify_unknown_error,
+    empty_content_error,
+)
 from src.services.llm_service import LLMService
 from src.ui.errors import render_streamlit_error
 from src.utils.markdown import md_to_html

@@ -20,31 +20,26 @@
 
 ## 项目预览
 
-当前版本已支持：
-
-- PDF 上传与正文提取
-- 智能总结（结构化学习笔记）
-- RAG 检索问答（基于文档片段）
-- 固定浅色界面（侧栏、上传区、表单组件统一可读）
+应用支持 PDF 上传与正文提取、结构化智能总结，以及基于文档片段的 RAG 检索问答，并提供统一的浅色界面体验。
 
 **在线 Demo**：暂未部署（可自行 Fork 后按下文部署到 Streamlit Cloud）。
+
+下面展示项目的主要页面效果，包括文档上传、智能总结和 RAG 问答。
 
 <p align="center">
   <img src="docs/assets/screenshot-home.png" alt="主界面" width="720"/>
 </p>
-<p align="center"><sub>主界面 — 上传 PDF、文档概览与 RAG 状态</sub></p>
+<p align="center"><sub>主界面：上传 PDF、查看文档概览与 RAG 状态</sub></p>
 
 <p align="center">
   <img src="docs/assets/screenshot-summary.png" alt="智能总结" width="720"/>
 </p>
-<p align="center"><sub>智能总结 — 结构化学习笔记</sub></p>
+<p align="center"><sub>智能总结：生成结构化学习笔记</sub></p>
 
 <p align="center">
   <img src="docs/assets/screenshot-rag-chat.png" alt="RAG 问答" width="720"/>
 </p>
-<p align="center"><sub>RAG 问答 — 多轮文档对话</sub></p>
-
-> 将实际截图放入 `docs/assets/` 后，上述图片会自动在 GitHub 上显示。路径可先作为占位保留。
+<p align="center"><sub>RAG 问答：基于文档内容的多轮对话</sub></p>
 
 ---
 
@@ -55,7 +50,7 @@
 - **结构化学习笔记总结**（核心知识点、考试重点、复习问题等）
 - **RAG 检索问答**（在文档范围内检索并作答，降低幻觉风险）
 
-项目采用 `app.py` 入口 + `src/` 分层架构（`core` / `config` / `utils` / `services` / `ui`），配置通过 **`.env` 环境变量**（`python-dotenv`）与 Streamlit Secrets 管理，适合作为 **GitHub 作品集** 展示端到端 AI 应用能力。
+项目采用 `app.py` 作为统一入口，并使用 `src/` 目录进行模块化拆分，包括配置管理、PDF 解析、LLM 调用、RAG 服务和 UI 组件，便于后续维护、扩展和部署。配置通过 **`.env` 环境变量**（`python-dotenv`）与 Streamlit Secrets 管理，适合作为作品集展示端到端 AI 应用开发能力。
 
 ---
 
@@ -273,9 +268,9 @@ EMBEDDING_MODEL_ID=text-embedding-3-small
 
 ---
 
-## 11. 安全说明
+## 11. 安全与隐私说明
 
-公开仓库与作品集展示时，**切勿提交**以下文件或目录：
+在公开仓库或作品集中展示本项目时，请注意保护 API 密钥与用户数据。以下文件与目录**不应提交**到 Git：
 
 | 不要提交 | 说明 |
 |----------|------|
@@ -288,7 +283,7 @@ EMBEDDING_MODEL_ID=text-embedding-3-small
 | `.pytest_cache/` | 测试缓存 |
 | `debug-*.log` 等调试日志 | 可能含路径或请求片段 |
 
-若 API Key 曾误提交到 Git 或截图泄露，请**立即在服务商控制台重置密钥**，并检查 Git 历史是否需清理（如 `git filter-repo` / BFG）。
+如 API Key 曾误提交到公开仓库，请及时在服务商后台重置密钥。
 
 ---
 
@@ -296,7 +291,7 @@ EMBEDDING_MODEL_ID=text-embedding-3-small
 
 **在线 Demo**：暂未部署。可按以下步骤自行发布（入口与本地一致）：
 
-1. 将项目推送到 **GitHub** 公开或私有仓库（确保未包含上文「安全说明」中的敏感文件）。
+1. 将项目推送到 **GitHub** 公开或私有仓库（确保未包含上文「安全与隐私说明」中的敏感文件）。
 2. 登录 [Streamlit Community Cloud](https://share.streamlit.io/)。
 3. 点击 **New app**，选择你的 GitHub 仓库。
 4. **Main file path** 填写：`app.py`

@@ -84,7 +84,10 @@ def rag_not_ready_error() -> AppError:
         code="rag_not_ready",
         title="检索索引未就绪",
         message="当前文档尚未建立向量索引，无法使用 RAG 问答。",
-        suggestion="请在主界面点击「重新建立向量索引」；若失败，请根据错误提示检查 API、网络或 Embedding 模型配置。",
+        suggestion=(
+            "请在主界面点击「重新建立向量索引」；若失败，请根据错误提示检查 "
+            "API、网络或 Embedding 模型配置。"
+        ),
     )
 
 

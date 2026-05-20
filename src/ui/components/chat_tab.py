@@ -11,7 +11,13 @@ from src.core.constants import (
     STATE_RAG_READY,
     SUGGESTION_QUESTIONS,
 )
-from src.core.exceptions import AppError, api_not_configured_error, classify_unknown_error, empty_content_error, rag_not_ready_error
+from src.core.exceptions import (
+    AppError,
+    api_not_configured_error,
+    classify_unknown_error,
+    empty_content_error,
+    rag_not_ready_error,
+)
 from src.services.rag_service import RAGService
 from src.ui.errors import render_streamlit_error
 from src.ui.session import queue_user_question
@@ -25,7 +31,9 @@ def render_chat_thread(messages: list[dict[str, str]]) -> None:
             <div class="ai-chat-tab-empty">
               <div class="ai-chat-tab-empty-icon" aria-hidden="true"></div>
               <div class="ai-chat-tab-empty-title">开始与文档对话</div>
-              <p class="ai-chat-tab-empty-desc">在下方输入问题或使用快捷提问；多轮对话会保存在本会话。</p>
+              <p class="ai-chat-tab-empty-desc">
+                在下方输入问题或使用快捷提问；多轮对话会保存在本会话。
+              </p>
             </div>
             """,
             unsafe_allow_html=True,

@@ -6,7 +6,6 @@ import streamlit as st
 
 from src.core.exceptions import AppError
 
-
 _ERROR_CATEGORY: dict[str, str] = {
     "api_auth": "认证失败",
     "rate_limit": "限流",
