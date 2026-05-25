@@ -178,11 +178,11 @@ PDF 上传 → DocumentService（解析 + 建索引）
 ### 步骤
 
 ```bash
-
+#1.克隆仓库
 git clone https://github.com/cccc-clt/pdf-learning-assistant.git
 cd pdf-learning-assistant
 
-# 1. 创建虚拟环境（推荐）
+# 2. 创建虚拟环境（推荐）
 python -m venv .venv
 
 # Windows
@@ -191,10 +191,10 @@ python -m venv .venv
 # macOS / Linux
 source .venv/bin/activate
 
-# 2. 安装依赖
+# 3. 安装依赖
 pip install -r requirements.txt
 
-# 3. 配置 API（见第 7、8 节）
+# 4. 配置 API（见第 7、8 节）
 ```
 
 ### 开发依赖（可选）
