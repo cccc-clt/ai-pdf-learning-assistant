@@ -179,8 +179,8 @@ PDF 上传 → DocumentService（解析 + 建索引）
 
 ```bash
 #1.克隆仓库
-git clone https://github.com/cccc-clt/pdf-learning-assistant.git
-cd pdf-learning-assistant
+git clone https://github.com/cccc-clt/ai-pdf-learning-assistant.git
+cd ai-pdf-learning-assistant
 
 # 2. 创建虚拟环境（推荐）
 python -m venv .venv
